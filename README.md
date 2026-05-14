@@ -61,12 +61,19 @@ Some additional columns may be added:
 # Bear Incidents by Month
 ![Monthly Incident Counts](./bear-data/monthly-count-bar.png) \
 Bear encounter incidents were lowest from January to March, which corresponds to the typical hibernation period.
+
 ![Monthly Incident Counts by Year](./bear-data/monthly-count-bar-by-year.png) \
-In Reiwa 4 and Reiwa 6, the number of bear incidents peaked during summer, whereas in Reiwa 5 and Reiwa 7, incidents were highest during autumn. This suggests the presence of a recurring two-year pattern.
+In Reiwa 4 and Reiwa 6, the number of bear incidents peaked during summer, whereas in Reiwa 5 and Reiwa 7, incidents were highest during autumn. This suggests the presence of a recurring two-year pattern. 
+A significant shift in bear encounter frequency was observed in Reiwa 7, where the number of bear encounter reports exceeded 1,000 in October. In contrast, peak incident counts in previous years never surpassed 300.
 
 # Time Series Decomposition
 
 # Correlation Analysis
+When correlation analysis was conducted using the entire dataset, the relationships between weather conditions and the number of bear incidents appeared weak. However, yearly correlation analysis revealed clearer patterns. \
+Among the weather variables, average temperature showed the strongest positive correlation with bear incidents in Reiwa 4 and Reiwa 6, indicating that higher temperatures were generally associated with increased bear encounter frequency. Precipitation and sunshine hours, on the other hand, show consistently weak correlations across all years. \
+A notable shift was observed in Reiwa 7, where correlations between weather conditions and bear incidents became smaller than in other fiscal years. This suggests that other factors may have large influence on bear activities during that year.
+![Correlation analysis on the entire dataset](./corr/corr.png)
+![Correlation analysis by fiscal year](./corr/corr-by-year.png)
 
 # Bear Encounter Prediction with RandomForest
 ## Setting 1
