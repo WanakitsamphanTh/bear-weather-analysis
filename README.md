@@ -59,9 +59,9 @@ Some additional columns may be added:
 - 1月, 2月, ... - month in which the incidents occured (for machine learning since time of the year also factors the probability)
 
 # Bear Incidents by Month
-![Monthly Incident Counts](./bear-data/monthly-count-bar.png)
+![Monthly Incident Counts](./bear-data/monthly-count-bar.png) \
 Bear encounter incidents were lowest from January to March, which corresponds to the typical hibernation period.
-![Monthly Incident Counts by Year](./bear-data/monthly-count-bar-by-year.png)
+![Monthly Incident Counts by Year](./bear-data/monthly-count-bar-by-year.png) \
 In Reiwa 4 and Reiwa 6, the number of bear incidents peaked during summer, whereas in Reiwa 5 and Reiwa 7, incidents were highest during autumn. This suggests the presence of a recurring two-year pattern.
 
 # Time Series Decomposition
