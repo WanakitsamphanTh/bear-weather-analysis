@@ -59,7 +59,8 @@ Some additional columns may be added:
 - 1月, 2月, ... - month in which the incidents occured (for machine learning since time of the year also factors the probability)
 
 # Bear Incidents by Month
-!(./bear-data/monthly-count-bar-by-year.png)
+![Monthly Incident Counts](./bear-data/monthly-count-bar.png)
+![Monthly Incident Counts by Year](./bear-data/monthly-count-bar-by-year.png)
 The statistics shows bear encounter incidents decrease between January - March which is hibernation period.
 
 # Time Series Decomposition
