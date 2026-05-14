@@ -81,7 +81,7 @@ From the figures, average temperature and average steam pressure show strong pos
 
 # Bear Encounter Prediction with RandomForest
 ## Details
-I experimented with two settings that differed in the number of inputs. In the first setting, all weather conditions were included. In contrast, the second setting excluded weather variables with weak correlations, as well as average steam pressure, which I hypothesized to reflect the same environmental conditions as average temperature. \
+I experimented with two settings that differed in the number of inputs. In the first setting, all weather conditions were included. In contrast, the second setting excluded weather variables with weak correlations, as well as average steam pressure, which I hypothesized to reflect the same environmental conditions as average temperature. 
 **Input** : \
 
 | variables | setting I | setting II |
@@ -120,15 +120,19 @@ According to the results, setting II yields fewer FP and FN cases than Setting I
 **Output**: the number of bear reports to be expected \
 Both input and output data are standardized with mean=0.0 and range [-1,1]. The scaler is fit on the train set (Reiwa 4-6). 
 
-**Model Structure**
-****to write*** \
-
 **Parameters**: \
+`time_step` = 14 : predict based on 14-day past data
 `hidden_dim` = 128 : the dimension of hidden state vectors \
 `layer_dim` = 1 : the number of recurrent layer \
 `lr` = 1e-3 : learning rate \
 `epochs` = 150
 `Loss function` : Mean-Squared Error
+
+**Model**:
+**Input** : input_shape = (, time_step, input_dim)`
+`RNN(input_size=input_dim,hidden_size=hidden_dim,num_layers=layer_dim,)`
+`Linear(hidden_dim, 1)`
+**Output**: output_shape = (, 1)
 
 ## Results
 ****to write*** \
