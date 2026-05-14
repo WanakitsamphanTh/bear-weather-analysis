@@ -121,23 +121,25 @@ According to the results, setting II yields fewer FP and FN cases than Setting I
 Both input and output data are standardized with mean=0.0 and range [-1,1]. The scaler is fit on the train set (Reiwa 4-6). 
 
 **Parameters**: \
-`time_step` = 14 : predict based on 14-day past data
+`time_step` = 14 : predict based on 14-day past data \
 `hidden_dim` = 128 : the dimension of hidden state vectors \
 `layer_dim` = 1 : the number of recurrent layer \
 `lr` = 1e-3 : learning rate \
-`epochs` = 150
+`epochs` = 150 \
 `Loss function` : Mean-Squared Error
 
 **Model**:
-**Input** : input_shape = (, time_step, input_dim)`
-`RNN(input_size=input_dim,hidden_size=hidden_dim,num_layers=layer_dim,)`
-`Linear(hidden_dim, 1)`
+**Input** : input_shape = (, time_step, input_dim)` \
+`RNN(input_size=input_dim,hidden_size=hidden_dim,num_layers=layer_dim,)` \
+`Linear(hidden_dim, 1)` \
 **Output**: output_shape = (, 1)
 
 ## Results
-****to write*** \
+
 **Training Loss** \
 ![Training loss](./rnn-results/train-loss.png) \
 
 **Prediction** \
-![Prediction](./rnn-results/predictions.png)
+![Prediction](./rnn-results/predictions.png) \
+
+As test by true past data, The predicted results generally follow the trend of the real number of reports, indicating that the model successfully recognize the temporal pattern
