@@ -80,16 +80,26 @@ A notable shift was observed in Reiwa 7, where correlations between weather cond
 From the figures, average temperature and average steam pressure show strong positive correlation. This suggests that these variables are closely related and may capture similar environmental conditions.
 
 # Bear Encounter Prediction with RandomForest
-## Setting 1
+I experimented with two settings that differed in the number of inputs. In the first setting, all weather conditions were included. In contrast, the second setting excluded weather variables with weak correlations, as well as average steam pressure, which I hypothesized to reflect the same environmental conditions as average temperature.
 **Input** \
-All data are standardized. \
+
+| variables | setting I | setting II |
+| :--- | :--- | :--- |
+| Average Temperature | ◯ | ◯ |
+| Precipitation | ◯ | x |
+| Sunshine hours | ◯ | x |
+| Average wind speed | ◯ | ◯ |
+| Average steam pressure | ◯ | x |
+| month (1,2,3...,12) | ◯ | ◯ |
+
+All quantitative variables were standardized. \
 **Output** : the probability of bear encountering 1 or 0\
 **Model**: RandomForestClassifier with 80 estimators and max_depth = 5. \
 **Train-test split**: Data prior to Reiwa 7 fiscal year is the train set and Reiwa 7 fiscal year data the test set.
 
 ## Results
 ****to write*** \
-
+![Confusion matrix in setting I](./random-forest-predictions/conf-mat-1.png) ![Confusion matrix in setting II](./random-forest-predictions/conf-mat-2.png)
 
 # Bear Encountering Time Series Forecasting
 ## Settings
