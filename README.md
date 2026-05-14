@@ -125,7 +125,7 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 `hidden_dim` = 128 : the dimension of hidden state vectors \
 `layer_dim` = 1 : the number of recurrent layer \
 `lr` = 1e-3 : learning rate \
-`epochs` = 150 \
+`epochs` = 300 \
 `Loss function` : Mean-Squared Error
 
 **Model**:
@@ -138,8 +138,7 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 
 **Training Loss** \
 ![Training loss](./rnn-results/train-loss.png) \
-
 **Prediction** \
 ![Prediction](./rnn-results/predictions.png) \
-
-As test by true past data, The predicted results generally follow the trend of the real number of reports, indicating that the model successfully recognize the temporal pattern
+As tested by the true past data, the predicted results struggle to accurately capture fluctuations in frequency. Although the spikes in both graphs generally align, the predicted graph appears more plateau-like, whereas the actual data shows greater variance. There is also a significant underestimation issue: while the real data peaks at around 80, the predictions never exceed 17. \
+Overall, we can conclude that the model is capable of learning the temporal trend, but it lacks volumetric accuracy.
