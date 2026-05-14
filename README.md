@@ -106,5 +106,11 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 `layer_dim` = 1 : the number of recurrent layer \
 `lr` = 1e-3 : learning rate \
 `epochs` = 150
+`Loss function` : Mean-Squared Error
 
 ## Results
+**Training Loss**
+![Training loss](./rnn-results/train-loss.png)
+
+**Prediction**
+![Prediction](./rnn-results/predictions.png)
