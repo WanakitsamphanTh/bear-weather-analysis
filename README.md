@@ -4,11 +4,11 @@ This project analyzes the relationship between bear incident reports and histori
 
 # Table of Contents
 1. [Data](##Data)
-2. [Bear Incidents by Month](##Bear-Incidents-by-Month)
-3. [Time Series Decomposition](##Time-Series-Decomposition)
-4. [Correlation Analysis](##Correlation-Analysis)
-5. [Bear Encounter Prediction with RandomForest](##Bear-Encounter-Prediction-with-RandomForest)
-6. [Bear Encountering Time Series Forecasting](##Bear-Encountering-Time-Series-Forecasting)
+2. [Bear Incidents by Month](#Bear-Incidents-by-Month)
+3. [Time Series Decomposition](#Time-Series-Decomposition)
+4. [Correlation Analysis](#Correlation-Analysis)
+5. [Bear Encounter Prediction with RandomForest](#Bear-Encounter-Prediction-with-RandomForest)
+6. [Bear Encountering Time Series Forecasting](#Bear-Encountering-Time-Series-Forecasting)
 
 # Data
 **Historical Weahter 2022/4/1 - 2026/3/31 Data** From Japan Meteorological Agency [気象庁](https://www.data.jma.go.jp/risk/obsdl/index.php) stored in `tenki.csv` \
@@ -65,9 +65,6 @@ Bear encounter incidents were lowest from January to March, which corresponds to
 ![Monthly Incident Counts by Year](./bear-data/monthly-count-bar-by-year.png) \
 In Reiwa 4 and Reiwa 6, the number of bear incidents peaked during summer, whereas in Reiwa 5 and Reiwa 7, incidents were highest during autumn. This suggests the presence of a recurring two-year pattern. \
 A significant shift in bear encounter frequency was observed in Reiwa 7, where the number of bear encounter reports exceeded 1,000 in October. In contrast, peak incident counts in previous years never surpassed 300.
-
-# Time Series Decomposition
-****to write*** \
 
 # Correlation Analysis
 When correlation analysis was conducted using the entire dataset, the relationships between weather conditions and the number of bear incidents appeared weak. However, yearly correlation analysis revealed clearer patterns. \
