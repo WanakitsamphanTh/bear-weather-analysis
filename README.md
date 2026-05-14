@@ -65,5 +65,32 @@ Some additional columns may be added:
 # Correlation Analysis
 
 # Bear Encounter Prediction with RandomForest
+## Setting 1
+**Input** \
+All data are standardized. \
+**Output** : the probability of bear encountering 1 or 0\
+**Model**: RandomForestClassifier with 80 estimators and max_depth = 5. \
+**Train-test split**: Data prior to Reiwa 7 fiscal year is the train set and Reiwa 7 fiscal year data the test set.
+
+## Results
+
 
 # Bear Encountering Time Series Forecasting
+## Settings
+**Input**: 
+- 平均気温(℃) (Average temperature)
+- 平均風速(m/s) (Average wind speed)
+- 月 (month)
+
+**Output**: the number of bear reports to be expected \
+Both input and output data are standardized with mean=0.0 and range [-1,1]. The scaler is fit on the train set (Reiwa 4-6). 
+
+**Model Structure**
+
+**Parameters**: \
+`hidden_dim` = 128 : the dimension of hidden state vectors \
+`layer_dim` = 1 : the number of recurrent layer \
+`lr` = 1e-3 : learning rate \
+`epochs` = 150
+
+## Results
