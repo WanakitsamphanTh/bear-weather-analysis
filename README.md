@@ -67,6 +67,7 @@ In Reiwa 4 and Reiwa 6, the number of bear incidents peaked during summer, where
 A significant shift in bear encounter frequency was observed in Reiwa 7, where the number of bear encounter reports exceeded 1,000 in October. In contrast, peak incident counts in previous years never surpassed 300.
 
 # Time Series Decomposition
+****to write*** \
 
 # Correlation Analysis
 When correlation analysis was conducted using the entire dataset, the relationships between weather conditions and the number of bear incidents appeared weak. However, yearly correlation analysis revealed clearer patterns. \
@@ -87,6 +88,7 @@ All data are standardized. \
 **Train-test split**: Data prior to Reiwa 7 fiscal year is the train set and Reiwa 7 fiscal year data the test set.
 
 ## Results
+****to write*** \
 
 
 # Bear Encountering Time Series Forecasting
@@ -100,6 +102,7 @@ All data are standardized. \
 Both input and output data are standardized with mean=0.0 and range [-1,1]. The scaler is fit on the train set (Reiwa 4-6). 
 
 **Model Structure**
+****to write*** \
 
 **Parameters**: \
 `hidden_dim` = 128 : the dimension of hidden state vectors \
@@ -109,8 +112,9 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 `Loss function` : Mean-Squared Error
 
 ## Results
-**Training Loss**
-![Training loss](./rnn-results/train-loss.png)
+****to write*** \
+**Training Loss** \
+![Training loss](./rnn-results/train-loss.png) \
 
-**Prediction**
+**Prediction** \
 ![Prediction](./rnn-results/predictions.png)
