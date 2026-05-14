@@ -39,7 +39,7 @@ In this project, I only use 発見日時 and transform into report date. The dat
 | :--- | :--- |
 
 ### Joint data
-The two data are joint on 年月日 (date). Any rows lacking report number, it is filled by 0. The following shows columns of the table after join
+The two data are joint on 年月日 (date). When number of reports is lacking from a row (which means there is no incident reported), it is filled by 0. The following shows columns of the table after join
 | 年月日 |	発見回数 | 平均気温(℃) |	降水量の合計(mm) |	日照時間(時間) |	平均風速(m/s) |	平均蒸気圧(hPa) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | date |	number of reports | Average temperature (℃) |	Precipitation (mm) |	Sunshine hours (h) |	Average wind speed (m/s) |	Average steam pressure (hPa) |
