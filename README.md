@@ -137,7 +137,7 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 ## Results
 
 **Training Loss** \
-![Training loss](./rnn-results/train-loss.png) \
+![Training loss](./rnn-results/loss.png) \
 **Prediction** \
 ![Prediction](./rnn-results/predictions.png) \
 As tested by the true past data, the predicted results struggle to accurately capture fluctuations in frequency. Although the spikes in both graphs generally align, the predicted graph appears more plateau-like, whereas the actual data shows greater variance. There is also a significant underestimation issue: while the real data peaks at around 80, the predictions never exceed 17. \
