@@ -30,8 +30,8 @@ Reiwa 7 (2025/4/1-2026/3/31) : [令和7年度クマ目撃等情報](https://www.
 - ~日照時間(時間) - Additional flags of sunshine hours (mm) [not used here]~
 - 平均風速(m/s) - Average wind speed (m/s)
 - ~平均風速(m/s) - Additional flags of average wind speed [not used here]~
-- 平均蒸気圧(hPa) - Average steam pressure (hPa)
-- ~平均蒸気圧(hPa) - Additional flags of average steam pressure [not used here]~
+- 平均蒸気圧(hPa) - Average vapor pressure (hPa)
+- ~平均蒸気圧(hPa) - Additional flags of average vapor pressure [not used here]~
 
 ## Bear incident report statistical data
 Bear incidents report statistical data consists of the following data
@@ -52,7 +52,7 @@ In this project, I only use 発見日時 and transform into report date. The dat
 The two data are joint on 年月日 (date). When number of reports is lacking from a row (which means there is no incident reported), it is filled by 0. The following shows columns of the table after join
 | 年月日 |	発見回数 | 平均気温(℃) |	降水量の合計(mm) |	日照時間(時間) |	平均風速(m/s) |	平均蒸気圧(hPa) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| date |	number of reports | Average temperature (℃) |	Precipitation (mm) |	Sunshine hours (h) |	Average wind speed (m/s) |	Average steam pressure (hPa) |
+| date |	number of reports | Average temperature (℃) |	Precipitation (mm) |	Sunshine hours (h) |	Average wind speed (m/s) |	Average vapor pressure (hPa) |
 
 Some additional columns may be added:
 - 目撃の有無 - 1 if the there is at leat one incident reported and 0 otherwise (for prediction)
@@ -69,16 +69,17 @@ A significant shift in bear encounter frequency was observed in Reiwa 7, where t
 # Correlation Analysis
 When correlation analysis was conducted using the entire dataset, the relationships between weather conditions and the number of bear incidents appeared weak. However, yearly correlation analysis revealed clearer patterns. \
 Among the weather variables, average temperature showed the strongest positive correlation with bear incidents in Reiwa 4 and Reiwa 6, indicating that higher temperatures were generally associated with increased bear encounter frequency. Precipitation and sunshine hours, on the other hand, show consistently weak correlations across all years. \
-A notable shift was observed in Reiwa 7, where correlations between weather conditions and bear incidents became smaller than in other fiscal years. This suggests that other factors may have large influence on bear activities during that year. \
+A notable shift was observed in Reiwa 7, where correlations between weather conditions and bear incidents became smaller than in other fiscal years. This suggests that other factors may have large influence on bear activities during that year. Average temperature and average vapor pressure showed strong correlations with the number of discoveries in Reiwa 4 and 6, while these correlations weakened in Reiwa 5 and 7, suggesting the possibility of a recurring two-year cycle in which Reiwa factors beyond this observation gains influence every 2 years. \
+In addition, average temperature and average vapor pressure show strong positive correlation. This suggests that these variables are closely related and may indicate the same environmental condition. \
 **Correlation analysis on the entire dataset** \
 ![Correlation analysis on the entire dataset](./corr/corr.png) \
 **Correlation analysis by year** \
 ![Correlation analysis by fiscal year](./corr/corr-by-year.png) \
-From the figures, average temperature and average steam pressure show strong positive correlation. This suggests that these variables are closely related and may capture similar environmental conditions.
+
 
 # Bear Encounter Prediction with RandomForest
 ## Details
-I experimented with two settings that differed in the number of inputs. In the first setting, all weather conditions were included. In contrast, the second setting excluded weather variables with weak correlations, as well as average steam pressure, which I hypothesized to reflect the same environmental conditions as average temperature. 
+I experimented with two settings that differed in the number of inputs. In the first setting, all weather conditions were included. In contrast, the second setting excluded weather variables with weak correlations, as well as average vapor pressure, which I hypothesized to reflect the same environmental conditions as average temperature. 
 **Input** : \
 
 | variables | setting I | setting II |
@@ -87,7 +88,7 @@ I experimented with two settings that differed in the number of inputs. In the f
 | Precipitation | ◯ | x |
 | Sunshine hours | ◯ | x |
 | Average wind speed | ◯ | ◯ |
-| Average steam pressure | ◯ | x |
+| Average vapor pressure | ◯ | x |
 | month (1,2,3...,12) | ◯ | ◯ |
 
 All quantitative variables were standardized. \
