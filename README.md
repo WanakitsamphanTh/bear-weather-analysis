@@ -74,13 +74,13 @@ In addition, average temperature and average vapor pressure show strong positive
 **Correlation analysis on the entire dataset** \
 ![Correlation analysis on the entire dataset](./corr/corr.png) \
 **Correlation analysis by year** \
-![Correlation analysis by fiscal year](./corr/corr-by-year.png) \
+![Correlation analysis by fiscal year](./corr/corr-by-year.png) 
 
 
 # Bear Encounter Prediction with RandomForest
 ## Details
 I experimented with two settings that differed in the number of inputs. In the first setting, all weather conditions were included. In contrast, the second setting excluded weather variables with weak correlations, as well as average vapor pressure, which I hypothesized to reflect the same environmental conditions as average temperature. 
-**Input** : \
+**Input** : 
 
 | variables | setting I | setting II |
 | :--- | :--- | :--- |
@@ -127,10 +127,10 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 `Loss function` : Mean-Squared Error
 
 **Model**:
-**Input** : input_shape = (, time_step, input_dim)` \
+**Input** : `input_shape = (, time_step, input_dim)` \
 `RNN(input_size=input_dim,hidden_size=hidden_dim,num_layers=layer_dim,)` \
 `Linear(hidden_dim, 1)` \
-**Output**: output_shape = (, 1)
+**Output**: `output_shape = (, 1)`
 
 ## Results
 
