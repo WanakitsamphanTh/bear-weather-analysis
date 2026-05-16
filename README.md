@@ -43,7 +43,7 @@ Bear incidents report statistical data consists of the following data
 - 発見頭数 - The number of bears encountered
 - 痕跡 - Whether the bears were encountered or only the traces found
 
-In this project, I only use 発見日時 and transform into report date. The data are grouped by date and counted by each. Note that I ingore the places and the manner how the bears were encountered. Every report is counted as 1. The final bear incident data will be as the following: \
+In this project, I only use 発見日時 and transform into report date. The data are grouped by date and counted by each. Note that I ingore the places and the manner how the bears were encountered. Every report is counted as 1. The final bear incident data will be as the following: 
 
 | 年月日 (date of incident) | 発見回数 (number of reports) |
 | :--- | :--- |
@@ -138,5 +138,5 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 ![Training loss](./rnn-results/loss.png) \
 **Prediction** \
 ![Prediction](./rnn-results/predictions.png) \
-As tested by the true past data, the predicted results struggle to accurately capture fluctuations in frequency. Although the spikes in both graphs generally align, the predicted graph appears more plateau-like, whereas the actual data shows greater variance. There is also a significant underestimation issue: while the real data peaks at around 80, the predictions never exceed 17. This may be explained by the sharp increase in bear encounters during Reiwa 7 in which the bear reports rose far above the peaks observed in previous years to a . \
+As tested by the true past data, the predicted results struggle to accurately capture fluctuations in frequency. Although the spikes in both graphs generally align, the predicted graph appears more plateau-like, whereas the actual data shows greater variance. There is also a significant underestimation issue: while the real data peaks at around 80, the predictions never exceed 17. This may be explained by the sharp increase in bear encounters during Reiwa 7 in which the bear reports rose far above the peaks observed in previous years to a grreat degree. \
 Overall, we can conclude that the model is capable of learning the temporal trend, but it lacks volumetric accuracy.
