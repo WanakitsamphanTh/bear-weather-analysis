@@ -138,5 +138,5 @@ Both input and output data are standardized with mean=0.0 and range [-1,1]. The 
 ![Training loss](./rnn-results/loss.png) \
 **Prediction** \
 ![Prediction](./rnn-results/predictions.png) \
-As tested by the true past data, the predicted results struggle to accurately capture fluctuations in frequency. Although the spikes in both graphs generally align, the predicted graph appears more plateau-like, whereas the actual data shows greater variance. There is also a significant underestimation issue: while the real data peaks at around 80, the predictions never exceed 17. \
+As tested by the true past data, the predicted results struggle to accurately capture fluctuations in frequency. Although the spikes in both graphs generally align, the predicted graph appears more plateau-like, whereas the actual data shows greater variance. There is also a significant underestimation issue: while the real data peaks at around 80, the predictions never exceed 17. This may be explained by the sharp increase in bear encounters during Reiwa 7 in which the bear reports rose far above the peaks observed in previous years to a . \
 Overall, we can conclude that the model is capable of learning the temporal trend, but it lacks volumetric accuracy.
